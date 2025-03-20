@@ -1,0 +1,623 @@
+:root {
+  --light-bluisy-gray: #ced7e0;
+  --dark-navy-blue: #112c3f;
+  --bright-turquoise-green: #1dc7a0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: var(--light-bluisy-gray);
+  padding-top: 4.5rem;
+}
+
+/* Style navbar */
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  background-color: var(--light-bluisy-gray);
+  border-bottom: 1px solid #000;
+}
+
+.logo h1 {
+  color: var(--dark-navy-blue);
+  font-size: 1.5rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.nav-item {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-item a {
+  color: var(--dark-navy-blue);
+  text-decoration: none;
+  transition: all 0.4s;
+  font-size: 1.1rem;
+}
+
+.nav-item a:hover {
+  color: var(--bright-turquoise-green);
+}
+/* Akhir style navbar */
+
+/* Style hero section */
+.hero {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 2rem 5rem;
+  min-height: 100vh;
+  background-color: var(--dark-navy-blue);
+}
+
+.headline {
+  line-height: 1.5;
+  animation: fadeleft 3s forwards;
+}
+
+.headline h2 {
+  color: var(--bright-turquoise-green);
+  font-size: 1.7rem;
+  font-weight: 700;
+}
+
+.headline p {
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.1rem;
+  width: 70%;
+  margin-top: 1rem;
+}
+
+.btn-cta button {
+  margin-top: 1rem;
+  padding: 0.7rem 1rem;
+  background-color: var(--bright-turquoise-green);
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  color: #fff;
+  font-weight: 700;
+  transition: all 0.4s;
+}
+
+.btn-cta button:hover {
+  background-color: #0f9d7a;
+}
+
+.hero-image img {
+  width: 100%;
+  object-fit: cover;
+  animation: faderight 3s forwards;
+  overflow-x: hidden;
+}
+
+/* Akhir hero section */
+
+/* Style artikel */
+.judul {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  color: var(--dark-navy-blue);
+}
+
+.artikel {
+  padding: 2rem 5rem;
+  margin-top: 1rem;
+}
+
+.artikel-kiri-kanan {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.artikel-kiri-kanan,
+.btn-artikel {
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0;
+}
+
+.artikel-image {
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.artikel-image img {
+  width: 100%;
+  border-radius: 20px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.artikel-image:hover img {
+  transform: scale(1.2);
+}
+
+.artikel-konten h2 {
+  color: var(--dark-navy-blue);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.artikel-konten p {
+  color: var(--dark-navy-blue);
+  font-size: 1.1rem;
+  margin-top: 1rem;
+}
+
+.btn-artikel {
+  text-align: center;
+  text-decoration: none;
+}
+
+.btn-artikel button {
+  margin-top: 1.5rem;
+  padding: 1rem 1rem;
+  background-color: var(--bright-turquoise-green);
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  color: #fff;
+  font-weight: 700;
+  transition: all 0.4s;
+}
+
+.btn-artikel button:hover {
+  background-color: #0f9d7a;
+}
+/* Akhir style artikel */
+
+/* Style kategori artikel */
+.kategori {
+  background-color: var(--dark-navy-blue);
+}
+.kategori .judul {
+  color: var(--bright-turquoise-green);
+  padding-top: 1.5rem;
+}
+
+.kartu-container {
+  display: flex;
+  flex-direction: column;
+  padding: 1.3rem 5rem;
+}
+
+.kartu-kiri-kanan {
+  display: flex;
+}
+
+.kiri,
+.kanan {
+  flex: 1;
+}
+
+.jarak-kartu {
+  background-color: var(--bright-turquoise-green);
+  margin: 1rem;
+  padding: 1.2rem;
+  border-radius: 10px;
+  box-shadow: 5px 5px 2px 2px rgba(0, 0, 0, 0.5);
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0;
+}
+
+.icon img {
+  width: 20%;
+  display: block;
+  margin: auto;
+}
+
+.app img {
+  width: 10%;
+}
+
+.judul-kategori {
+  color: var(--dark-navy-blue);
+  padding-top: 1.2rem;
+}
+
+.deskripsi-kategori {
+  color: var(--dark-navy-blue);
+  font-weight: 700;
+  padding-top: 1rem;
+  line-height: 1.4;
+}
+
+.tengah {
+  text-align: center;
+}
+
+.btn-kategori button {
+  border: none;
+  outline: none;
+  background-color: var(--dark-navy-blue);
+  color: #fff;
+  margin-top: 1rem;
+  padding: 0.7rem 1rem;
+  border-radius: 10px;
+  font-weight: 700;
+  transition: all 0.4s;
+}
+
+.btn-kategori button:hover {
+  background-color: #1a4563;
+}
+
+/* Akhir style kategori artikel */
+
+/* Style footer */
+
+.footer-container {
+  padding: 5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-icon img {
+  width: 3rem;
+  padding: 0.2rem;
+}
+
+.judul-footer {
+  color: var(--dark-navy-blue);
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.deskripsi-footer p {
+  font-weight: 700;
+  line-height: 1.5;
+  max-width: 350px;
+  color: var(--dark-navy-blue);
+}
+
+.footer-item a {
+  text-decoration: none;
+  color: var(--dark-navy-blue);
+  display: block;
+  padding: 0.2rem 0;
+  font-weight: 700;
+  transition: all 0.3s;
+}
+
+.footer-item a:hover {
+  color: #1dc7a0;
+}
+
+.copyright {
+  background-color: var(--dark-navy-blue);
+  color: var(--bright-turquoise-green);
+  text-align: center;
+  font-weight: 700;
+  padding: 2rem;
+}
+/* Akhir style footer */
+
+/* Animation */
+@keyframes appear {
+  from {
+    opacity: 0;
+    scale: 0.5;
+  }
+
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+@keyframes fadeleft {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes faderight {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+/* Responsive mobile */
+@media (min-width: 360px) and (max-width: 768px) {
+  header nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo h1 {
+    font-size: 2rem;
+  }
+
+  .nav-item a {
+    margin-top: 1rem;
+  }
+
+  .hero {
+    flex-direction: column-reverse;
+    padding: 1.1rem;
+    min-height: 90vh;
+    justify-content: center;
+  }
+
+  .hero-image img {
+    width: 60%;
+    display: block;
+    margin: 3rem auto 1rem;
+  }
+
+  .headline h2 {
+    text-align: center;
+  }
+
+  .headline p {
+    margin: auto;
+    text-align: center;
+    width: 100%;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+  }
+
+  .btn-cta button {
+    display: block;
+    margin: 1rem auto 0;
+    font-size: 1rem;
+  }
+
+  .btn-cta a {
+    text-decoration: none;
+  }
+
+  .artikel {
+    padding: 1rem;
+  }
+
+  .artikel-kiri-kanan {
+    background-color: #c9d4dd;
+    box-shadow: 1px 2px 3px 1px rgba(0, 0, 0, 0.5);
+    flex-wrap: wrap;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .artikel-image {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 0;
+  }
+
+  .artikel-image img {
+    border-radius: 0;
+  }
+
+  .artikel-konten {
+    padding: 1rem;
+  }
+
+  .artikel-konten h2 {
+    font-size: 1.5rem;
+  }
+
+  .artikel-konten p {
+    font-size: 1.3rem;
+  }
+
+  .gadget {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .button-full button {
+    width: 100%;
+  }
+
+  .btn-artikel button {
+    font-size: 1rem;
+  }
+
+  .kartu-container {
+    padding: 1rem;
+  }
+
+  .kartu-kiri-kanan {
+    flex-direction: column;
+  }
+
+  .jarak-kartu {
+    width: 100%;
+    margin: 1rem 0;
+  }
+
+  .judul-kategori {
+    font-size: 1.2rem;
+  }
+
+  .deskripsi-kategori {
+    width: 100%;
+    font-size: 1.2rem;
+  }
+
+  .tengah {
+    text-align: left;
+  }
+
+  .icon img {
+    width: 40%;
+  }
+
+  .btn-kategori button {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  .footer-container {
+    padding: 1rem;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .judul-footer {
+    margin-top: 1rem;
+    font-size: 1.7rem;
+  }
+
+  .deskripsi-footer p {
+    margin: auto;
+    font-size: 1.2rem;
+  }
+
+  .footer-item a {
+    font-size: 1.2rem;
+  }
+
+  .copyright {
+    font-weight: 700;
+    font-size: 1.1rem;
+  }
+}
+
+/* Responsive ipad */
+@media (min-width: 800px) and (max-width: 1024px) {
+  .logo {
+    font-size: 1.4rem;
+  }
+
+  .nav-item a {
+    font-size: 1.2rem;
+  }
+
+  .hero {
+    gap: 50px;
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+
+  .headline h2 {
+    text-align: center;
+    font-size: 1.6rem;
+  }
+
+  .headline p {
+    width: 100%;
+    text-align: center;
+    font-size: 1.2rem;
+  }
+
+  .btn-ipad button {
+    margin: 1rem auto;
+    display: block;
+    font-size: 1.2rem;
+  }
+
+  .btn-ipad a {
+    text-decoration: none;
+  }
+
+  .hero-image img {
+    width: 70%;
+    display: block;
+    margin: auto;
+  }
+
+  .artikel-image img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .artikel {
+    padding: 1rem;
+  }
+
+  .judul {
+    margin-bottom: 1.2rem;
+  }
+
+  .artikel-konten p {
+    font-size: 1.2rem;
+  }
+
+  .btn-cta button {
+    font-size: 1.2rem;
+  }
+
+  .btn-artikel button {
+    font-size: 1.2rem;
+  }
+
+  .kartu-container {
+    padding: 1rem;
+  }
+
+  .icon img {
+    width: 50%;
+  }
+
+  .app img {
+    width: 30%;
+  }
+
+  .deskripsi-kategori {
+    font-size: 1.2rem;
+  }
+
+  .btn-kategori button {
+    font-size: 1.2rem;
+  }
+
+  .footer-container {
+    padding: 1rem;
+  }
+
+  .judul-footer {
+    font-size: 1.2rem;
+  }
+
+  .deskripsi-footer {
+    font-size: 1.1rem;
+  }
+
+  .footer-item {
+    font-size: 1.1rem;
+  }
+
+  .copyright {
+    font-size: 1.2rem;
+  }
+}
