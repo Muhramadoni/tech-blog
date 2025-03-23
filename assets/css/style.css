@@ -459,7 +459,7 @@ body {
   }
 }
 
-@media screen and (min-height: 700px) {
+@media screen and (min-height: 100px) {
   .hero {
     min-height: 90vh;
   }
