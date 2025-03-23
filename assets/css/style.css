@@ -90,7 +90,7 @@ body {
 
 .btn-cta {
   display: flex;
-  gap: 1rem;
+  gap: 2rem;
   align-items: center;
 }
 
@@ -348,6 +348,7 @@ body {
 
   .btn-cta {
     justify-content: center;
+    gap: 2rem;
   }
 
   .judul h2 {
